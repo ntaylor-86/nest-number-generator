@@ -59,6 +59,14 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(20)
         sizePolicy.setHeightForWidth(self.jobInput.sizePolicy().hasHeightForWidth())
         self.jobInput.setSizePolicy(sizePolicy)
+
+
+        ##################################
+        ####  TO ALLOW ONLY INTEGERS  ####
+        ##################################
+        self.jobInput.setValidator(QtGui.QIntValidator(1, 1000000))
+
+
         self.jobInput.setMinimumSize(QtCore.QSize(0, 30))
         font = QtGui.QFont()
         font.setPointSize(12)
